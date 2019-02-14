@@ -1,0 +1,16 @@
+@import "../../../scss/custom";
+#about {
+  position: relative;
+  top: -30vh; //   left: -15vw;
+  z-index: 2;
+  @include media-breakpoint-down(sm) {
+    padding: 5% 2% 5% 30%;
+  }
+  @include media-breakpoint-up(sm) {
+    padding: 5% 5% 5% 25%;
+  }
+  background-color: white;
+  .h5 {
+    color: $red;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../scss/custom";
+#prokect {
+    position: relative;
+    top: -80vh;
+    @include media-breakpoint-down(sm) {
+        height: 80vh;
+        background-color: $dark;
+        .text {
+            padding: 15vh 20vw 20px 10vw;
+            color: beige;
+            .imie {}
+            .secondary {
+                color: $dark;
+            }
+        }
+    }
+    @include media-breakpoint-up(sm) {
+        height: 70vh;
+        background-color: $dark;
+        .text {
+            padding: 20vh 40vw 20px 10vw;
+            color: beige;
+            .imie {}
+            .secondary {
+                color: $dark;
+            }
+        }
+    }
+}
