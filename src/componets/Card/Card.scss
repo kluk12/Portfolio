@@ -1,0 +1,46 @@
+.quote {
+    width: 80vw;
+    min-height: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 2;
+    .box {
+        position: relative;
+        width: 25vw;
+        height: 80vw;
+        background: #cfcfcf;
+        overflow: hidden;
+        transform: 0.5s;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: 30px;
+        box-shadow: -10px 15px 20px #111111;
+        &:hover {
+            box-shadow: -20px 50px 100px #111111;
+        }
+    }
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0; // background: #111111;
+        transform: 0.5s;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+    }
+    .box1:hover~.bg {
+        opacity: 1;
+        background: linear-gradient(#03a9f4, #e91e33);
+    }
+    .box2:hover~.bg {
+        opacity: 1;
+        background: linear-gradient(#ffc107, #19fd36);
+    }
+    .box3:hover~.bg {
+        opacity: 1;
+        background: linear-gradient(#ffc107, #e91e63);
+    }
+}

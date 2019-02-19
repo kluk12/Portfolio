@@ -10,7 +10,7 @@ export default class index extends Component {
       <Fragment>
         <Head />
         <About />
-        <Project />
+        {/* <Project /> */}
       </Fragment>
     );
   }

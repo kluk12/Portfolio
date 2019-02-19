@@ -35,6 +35,11 @@
   }
 }
 
+@mixin font-size($sizeValue: 1.6) {
+  // font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
 //   .sidebar {
 //     display: none;
 //     @include screen('tablet') {
@@ -59,6 +64,7 @@
     clear: both;
   }
 }
+
 // Wyśrodkowanie absolutne
 // Świetna mixina, która pozwala na wyśrodkowanie elementu absolutnie na 3 sposoby: w pionie (vertical), poziomie (horizontal) i całkowicie (both).
 @mixin center($position) {

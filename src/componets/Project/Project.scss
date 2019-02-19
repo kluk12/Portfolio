@@ -1,29 +1,43 @@
 @import "../../../scss/custom";
 #prokect {
-    position: relative;
+  position: relative; //   top: -80vh;
+  padding: 50vh 5vw 20px 5vw;
+  @include media-breakpoint-down(sm) {
     top: -80vh;
-    @include media-breakpoint-down(sm) {
-        height: 80vh;
-        background-color: $dark;
-        .text {
-            padding: 15vh 20vw 20px 10vw;
-            color: beige;
-            .imie {}
-            .secondary {
-                color: $dark;
-            }
-        }
+    height: 200vh;
+    background-color: $dark;
+    .text {
+      padding: 15vh 20vw 20px 10vw;
+      color: beige;
+      .imie {
+      }
+      .secondary {
+        color: $dark;
+      }
     }
-    @include media-breakpoint-up(sm) {
-        height: 70vh;
-        background-color: $dark;
-        .text {
-            padding: 20vh 40vw 20px 10vw;
-            color: beige;
-            .imie {}
-            .secondary {
-                color: $dark;
-            }
-        }
+  }
+  @include media-breakpoint-up(sm) {
+    top: -60vh;
+    height: 30vh;
+    background-color: $dark;
+    .text {
+      padding: 20vh 40vw 20px 10vw;
+      color: beige;
+      .imie {
+      }
+      .secondary {
+        color: $dark;
+      }
     }
+  }
+}
+
+#lp {
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  background-color: red;
+  @include media-breakpoint-down(sm) {
+    left: -80vw;
+  }
 }

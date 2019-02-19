@@ -4,10 +4,7 @@ import "./About.scss";
 export default class About extends Component {
   render() {
     return (
-      <section
-        id="about"
-        className={window.width >= 768 ? "slide-left" : "slide-left2"}
-      >
+      <section id="about" className="slide-left2">
         <div className="container">
           <div className=" justify-content-md-center">
             <div className="col-12">
