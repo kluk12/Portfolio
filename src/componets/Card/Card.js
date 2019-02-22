@@ -18,7 +18,7 @@ export default class Card extends Component {
           </div>
           <div className="bg" />
         </div>
-        {/* <div>
+        <div>
           <div className="box box2">
             <p>
               Magna excepteur ad ut commodo ullamco nostrud. Velit mollit
@@ -41,7 +41,7 @@ export default class Card extends Component {
             </p>
           </div>
           <div className="bg" />
-        </div> */}
+        </div>
       </div>
     );
   }

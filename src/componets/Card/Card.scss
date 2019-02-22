@@ -1,10 +1,86 @@
+$github: #999;
+@mixin textShadow($color, $depth: 5, $direction: 'down') {
+    $i: 1;
+    $coord-x: 0;
+    $coord-y: 0; // Directions
+    @if $direction=='top' {
+        $coord-x: 0;
+        $coord-y: -1;
+    }
+    @if $direction=='top-right' {
+        $coord-x: 1;
+        $coord-y: -1;
+    }
+    @if $direction=='bottom' {
+        $coord-x: 0;
+        $coord-y: 1;
+    }
+    @if $direction=='bottom-right' {
+        $coord-x: 1;
+        $coord-y: 1;
+    }
+    @if $direction=='bottom-left' {
+        $coord-x: -1;
+        $coord-y: 1;
+    }
+    @if $direction=='left' {
+        $coord-x: -1;
+        $coord-y: 0;
+    }
+    @if $direction=='top-left' {
+        $coord-x: -1;
+        $coord-y: -1;
+    }
+    $shadow: ();
+    @while $i <=$depth {
+        $shadow-part: #{$coord-x * $i}px #{$coord-y * $i}px $color;
+        $shadow: append($shadow, $shadow-part, comma);
+        $i: $i + 1;
+    }
+    text-shadow: unquote($shadow);
+}
+
 .quote {
-    width: 80vw;
-    min-height: 50vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 80vw; // min-height: 50vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10px;
     z-index: 2;
+    .rounded {
+        transition: transform 350ms ease, border-radius 350ms ease;
+        i {
+            transition: transform 350ms ease;
+        }
+        &:hover {
+            border-radius: 50%;
+            transform: rotate(45deg);
+            i {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .gradient {
+        &:hover {
+            &:before {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .github {
+        background: $github;
+        &.long-shadow {
+            &:before {
+                background: shade($github, 15%);
+            }
+            i {
+                @include textShadow(shade($github, 15%), 70, 'bottom-right');
+            }
+        }
+    }
     .box {
         position: relative;
         width: 25vw;
@@ -42,5 +118,31 @@
     .box3:hover~.bg {
         opacity: 1;
         background: linear-gradient(#ffc107, #e91e63);
+    }
+}
+
+.github {
+    background: $github;
+    &.long-shadow {
+        &:before {
+            background: shade($github, 15%);
+        }
+        i {
+            @include textShadow(shade($github, 15%), 70, 'bottom-right');
+        }
+    }
+}
+
+.rounded {
+    transition: transform 350ms ease, border-radius 350ms ease;
+    i {
+        transition: transform 350ms ease;
+    }
+    &:hover {
+        border-radius: 50%;
+        transform: rotate(45deg);
+        i {
+            transform: rotate(-45deg);
+        }
     }
 }

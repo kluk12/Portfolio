@@ -1,43 +1,47 @@
 @mixin responsive-ratio($x, $y, $pseudo: false) {
-  $padding: unquote(($y / $x) * 100 + "%");
-  @if $pseudo {
-    &:before {
-      @include pseudo($pos: relative);
-      width: 100%;
-      padding-top: $padding;
+    $padding: unquote(($y / $x) * 100 + "%");
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
     }
-  } @else {
-    padding-top: $padding;
-  }
+    @else {
+        padding-top: $padding;
+    }
 }
 
 //Media queries
 @mixin screen($size) {
-  $desktop: "(min-width: 1024px)";
-  $tablet: "(min-width: 768px)";
-  $mobile: "(min-width: 460px)";
-  @if $size==desktop {
-    @media only screen and #{$desktop} {
-      @content;
+    $desktop: "(min-width: 1024px)";
+    $tablet: "(min-width: 768px)";
+    $mobile: "(min-width: 460px)";
+    @if $size==desktop {
+        @media only screen and #{$desktop} {
+            @content;
+        }
     }
-  } @else if $size==tablet {
-    @media only screen and #{$tablet} {
-      @content;
+    @else if $size==tablet {
+        @media only screen and #{$tablet} {
+            @content;
+        }
     }
-  } @else if $size==mobile {
-    @media only screen and #{$mobile} {
-      @content;
+    @else if $size==mobile {
+        @media only screen and #{$mobile} {
+            @content;
+        }
     }
-  } @else {
-    @media only screen and #{$size} {
-      @content;
+    @else {
+        @media only screen and #{$size} {
+            @content;
+        }
     }
-  }
 }
 
 @mixin font-size($sizeValue: 1.6) {
-  // font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
+    // font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
 }
 
 //   .sidebar {
@@ -51,41 +55,43 @@
 //     }
 //   }
 @mixin margin-auto {
-  margin: {
-    left: auto;
-    right: auto;
-  }
+    margin: {
+        left: auto;
+        right: auto;
+    }
 }
 
 @mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 // Wyśrodkowanie absolutne
 // Świetna mixina, która pozwala na wyśrodkowanie elementu absolutnie na 3 sposoby: w pionie (vertical), poziomie (horizontal) i całkowicie (both).
 @mixin center($position) {
-  position: absolute;
-  @if $position== "vertical" {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  } @else if $position== "horizontal" {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translate(-50%);
-  } @else if $position== "both" {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+    position: absolute;
+    @if $position=="vertical" {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @else if $position=="horizontal" {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%);
+    }
+    @else if $position=="both" {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 }
 
 //   .parent {
@@ -96,35 +102,32 @@
 //   }
 //  Dodawanie fontów
 @mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
-  @font-face {
-    font-family: quote($font-name);
-    src: url($file-name+".eot");
-    src: url($file-name+".eot?#iefix") format("embedded-opentype"),
-      url($file-name+".woff") format("woff"),
-      url($file-name+".ttf") format("truetype"),
-      url($file-name+".svg##{$font-name}") format("svg");
-    font-weight: $weight;
-    font-style: $style;
-  }
+    @font-face {
+        font-family: quote($font-name);
+        src: url($file-name+".eot");
+        src: url($file-name+".eot?#iefix") format("embedded-opentype"),
+        url($file-name+".woff") format("woff"),
+        url($file-name+".ttf") format("truetype"),
+        url($file-name+".svg##{$font-name}") format("svg");
+        font-weight: $weight;
+        font-style: $style;
+    }
 } //   @include font-face('MuseoSans', '/fonts/MuseoSans');
 //gradient
 @mixin background-gradient($start-color, $end-color, $orientation) {
-  background: $start-color;
-  @if $orientation== "vertical" {
-    background: -webkit-linear-gradient(top, $start-color, $end-color);
-    background: linear-gradient(to bottom, $start-color, $end-color);
-  } @else if $orientation== "horizontal" {
-    background: -webkit-linear-gradient(left, $start-color, $end-color);
-    background: linear-gradient(to right, $start-color, $end-color);
-  } @else {
-    background: -webkit-radial-gradient(
-      center,
-      ellipse cover,
-      $start-color,
-      $end-color
-    );
-    background: radial-gradient(ellipse at center, $start-color, $end-color);
-  }
+    background: $start-color;
+    @if $orientation=="vertical" {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    }
+    @else if $orientation=="horizontal" {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    }
+    @else {
+        background: -webkit-radial-gradient( center, ellipse cover, $start-color, $end-color);
+        background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
 }
 
 // .gradient {
