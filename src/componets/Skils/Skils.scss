@@ -1,0 +1,120 @@
+@import "../../../scss/custom";
+@mixin gr() {
+    .progress {
+        .gg {
+            background: #e0e0e0;
+            background: linear-gradient(135deg, rgb(179, 27, 27) 0%, $red 100%);
+            background: -moz-linear-gradient(-45deg, rgb(179, 27, 27) 0%, $red 100%);
+            background: -moz-linear-gradient(-45deg, rgb(179, 27, 27) 0%, $red 100%);
+            background: -webkit-linear-gradient( -45deg, rgb(179, 27, 27) 0%, $red 100%);
+            background: -webkit-linear-gradient( 315deg, rgb(179, 27, 27) 0%, $red 100%);
+            background: -o-linear-gradient(315deg, rgb(179, 27, 27) 0%, $red 100%);
+        }
+    }
+}
+
+#skils {
+    background: #000000;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    grid-auto-rows: minmax(auto);
+    padding: 3%;
+    color: #ffffff;
+    @include media-breakpoint-up(md) {
+        padding: 5% 5% 5% 5%;
+    }
+    .one {
+        grid-column: 1;
+        grid-row: 2;
+        @include gr();
+    }
+    .two {
+        grid-column: 1;
+        grid-row: 3;
+        @include gr();
+    }
+    .three {
+        grid-column: 1;
+        grid-row: 4;
+        @include gr();
+    }
+    .four {
+        grid-column: 1;
+        grid-row: 5;
+        @include gr();
+    }
+    .five {
+        grid-column: 1;
+        grid-row: 6;
+        @include gr();
+    }
+    .six {
+        grid-column: 1;
+        grid-row: 7;
+        @include gr();
+    }
+    .seven {
+        grid-column: 1;
+        grid-row: 8;
+        @include gr();
+    }
+    .eight {
+        grid-column: 1;
+        grid-row: 9;
+        @include gr();
+    }
+    .nine {
+        grid-column: 1;
+        grid-row: 10;
+        @include gr();
+    }
+    .title {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 50px;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        margin: 0 0 80px;
+        letter-spacing: 6px;
+        position: relative;
+        display: inline-block;
+    }
+    @media (max-width: 767px) {
+        .title {
+            font-size: 35px;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+    }
+    .title:before {
+        position: absolute;
+        content: "";
+        height: 6px;
+        width: 15%;
+        bottom: -8px;
+        background: #ff2100;
+        background: linear-gradient(135deg, red 0%, #ff0177 100%);
+        background: -moz-linear-gradient(-45deg, red 0%, #ff0177 100%);
+        background: -moz-linear-gradient(-45deg, red 0%, #ff0177 100%);
+        background: -webkit-linear-gradient(-45deg, red 0%, #ff0177 100%);
+        background: -webkit-linear-gradient(315deg, red 0%, #ff0177 100%);
+        background: -o-linear-gradient(315deg, red 0%, #ff0177 100%);
+    }
+    .smal-skil {
+        grid-column: 1;
+        grid-row: 11;
+        color: #ffffff;
+        .addit-wrapper {}
+    }
+    .tab {
+        grid-column: 1;
+        grid-row: 12;
+        table {
+            .color {
+                color: #ffffff;
+            }
+        }
+    }
+}

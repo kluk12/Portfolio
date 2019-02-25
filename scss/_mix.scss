@@ -12,28 +12,44 @@
     }
 }
 
-//Media queries
-@mixin screen($size) {
-    $desktop: "(min-width: 1024px)";
-    $tablet: "(min-width: 768px)";
-    $mobile: "(min-width: 460px)";
-    @if $size==desktop {
-        @media only screen and #{$desktop} {
+// //Media queries// @mixin screen($size) {
+//     $desktop: "(min-width: 1024px)";
+//     $tablet: "(min-width: 768px)";
+//     $mobile: "(min-width: 460px)";
+//     @if $size==desktop {
+//         @media only screen and #{$desktop} {
+//             @content;
+//         }
+//     }
+//     @else if $size==tablet {
+//         @media only screen and #{$tablet} {
+//             @content;
+//         }
+//     }
+//     @else if $size==mobile {
+//         @media only screen and #{$mobile} {
+//             @content;
+//         }
+//     }
+//     @else {
+//         @media only screen and #{$size} {
+//             @content;
+//         }
+//     }
+// }
+@mixin breakpoint($point) {
+    @if $point==large {
+        @media (min-width: 64.375em) {
             @content;
         }
     }
-    @else if $size==tablet {
-        @media only screen and #{$tablet} {
+    @else if $point==medium {
+        @media (min-width: 50em) {
             @content;
         }
     }
-    @else if $size==mobile {
-        @media only screen and #{$mobile} {
-            @content;
-        }
-    }
-    @else {
-        @media only screen and #{$size} {
+    @else if $point==small {
+        @media (min-width: 37.5em) {
             @content;
         }
     }

@@ -1,26 +1,4 @@
-@import "../../../scss/custom";
-head {
-  .text {
-    width: 700px; // position: absolute;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      // position: absolute;
-      font-family: Gilroy;
-      font-weight: 700;
-      margin: 0;
-    }
-    p {
-      // position: absolute;
-      font-size: 1rem;
-      font-weight: 300;
-      line-height: 1.7;
-      letter-spacing: 0.1em;
-      color: #b1b1b1;
-    }
-  }
-}
-about {
+.body {
+    width: 100%;
+    background: #000000;
 }
