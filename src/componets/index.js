@@ -4,8 +4,11 @@ import Head from "./Head/Head";
 import About from "./About/About";
 import Project from "./Project/Project";
 import Skils from "./Skils/Skils";
+
 import "./sass/style.scss";
 // import Ico from "./ico";
+import Card2 from "./Card/card2";
+
 export default class index extends Component {
   spisner = () => {
     return (
@@ -18,11 +21,11 @@ export default class index extends Component {
     return (
       <React.Suspense fallback={this.spisner}>
         <div className="body">
-          <Head />
-          <About />
-          <Skils />
+          {/* <Head /> */}
+          {/* <About /> */}
+          {/* <Skils /> */}
           <Project />
-          {/* <Ico /> */}
+          {/* <Card2 /> */}
         </div>
       </React.Suspense>
     );

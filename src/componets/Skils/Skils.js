@@ -7,7 +7,7 @@ export default class Skils extends Component {
       <section id="skils">
         <h2 className="title text-center">SKILLS</h2>
 
-        <div className="one">
+        <div className="one" data-aos="zoom-out-up">
           <h3>HTML</h3>
           <div className="progress">
             <div
@@ -20,7 +20,7 @@ export default class Skils extends Component {
             />
           </div>
         </div>
-        <div className="two">
+        <div className="two" data-aos="zoom-out-up">
           <h3>CSS(SASS)</h3>
           <div className="progress">
             <div
@@ -33,7 +33,7 @@ export default class Skils extends Component {
             />
           </div>
         </div>
-        <div className="three">
+        <div className="three" data-aos="zoom-out-up">
           <h3>JAVASCRIPT</h3>
           <div className="progress">
             <div
@@ -48,7 +48,7 @@ export default class Skils extends Component {
         </div>
         <div className="four">
           <h3>REACT</h3>
-          <div className="progress">
+          <div className="progress" data-aos="zoom-out-up">
             <div
               className="progress-bar gg"
               role="progressbar"
@@ -57,17 +57,9 @@ export default class Skils extends Component {
               aria-valuemin="0"
               aria-valuemax="100"
             />
-            {/* <div
-              className="progress-bar  gg"
-              role="progressbar"
-              style={{ width: "30%" }}
-              aria-valuenow="30"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />*/}
           </div>
         </div>
-        <div className="five">
+        <div className="five" data-aos="zoom-out-up">
           <h3>MATERIAL-UI</h3>
           <div className="progress">
             <div
@@ -80,7 +72,7 @@ export default class Skils extends Component {
             />
           </div>
         </div>
-        <div className="seven">
+        <div className="seven" data-aos="zoom-out-up">
           <h3>BOODSTRAP 4</h3>
           <div className="progress">
             <div
@@ -93,7 +85,7 @@ export default class Skils extends Component {
             />
           </div>
         </div>
-        <div className="eight">
+        <div data-aos="zoom-out-up" className="eight">
           <h3>REDUX</h3>
           <div className="progress">
             <div
@@ -106,7 +98,7 @@ export default class Skils extends Component {
             />
           </div>
         </div>
-        <div className="nine">
+        <div className="nine" data-aos="zoom-out-up">
           <h3>TESTS(JEST/ENZYME)</h3>
           <div className="progress">
             <div
@@ -119,11 +111,11 @@ export default class Skils extends Component {
             />
           </div>
         </div>
-        <div className="smal-skil">
+        <div className="smal-skil ">
           <div className=" addit-wrapper ">
             <h2 className=" card-title ">Dodatkowe skille</h2>
             <p className=" p-2">
-              <strong>Technologie:</strong> git, npm,Lodash, Microsoft Office
+              <strong>Technologie:</strong> git, npm, Lodash, Webpack
             </p>
             <p className=" p-2">
               <strong>Inne:</strong> Prawojazdy cat. B, Umiejętność

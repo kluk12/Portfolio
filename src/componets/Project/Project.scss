@@ -1,103 +1,146 @@
 @import "../../../scss/custom";
+// $gred: #ff0177;
+$gred: #f7f0f3;
 #prokect {
-    // position: relative; // bottom: -80vh;
-    z-index: 0; // height: 300vh;
-    @include media-breakpoint-up(xs) {
-        // top: -109vh; //poprawić
-        // height: 230vh;
-        // padding: 80vh 0vw 20px 0vw;
-        background-color: $dark;
-        .text {
-            padding: 15vh 20vw 20px 10vw;
-            color: beige;
-        }
+  // position: relative;
+  background-color: $red;
+  z-index: 0; //   background: #000000;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-gap: 20px;
+  grid-auto-rows: minmax(auto); // padding: 10% 3%;
+  color: #ffffff;
+  @include media-breakpoint-down(sm) {
+    padding: 15% 3% 3%;
+    .bittrex {
+      grid-column: 1/2;
+      grid-row: 1;
     }
-    @include media-breakpoint-down(sm) {
-        // top: -109vh; //poprawić
-        // height: 230vh;
-        // padding: 80vh 0vw 20px 0vw;
-        background-color: $dark;
-        .text {
-            padding: 15vh 0 20px 0;
-            color: beige;
-        }
+    .gielda {
+      grid-column: 1/2;
+      grid-row: 2;
     }
-    @include media-breakpoint-up(sm) {
-        // top: -69vh;
-        // height: 230vh;
-        background-color: $dark;
-        .text {
-            padding: 20vh 40vw 20px 10vw;
-            color: beige;
-        }
+    .deliver {
+      grid-column: 1/2;
+      grid-row: 3;
     }
-    @include media-breakpoint-up(md) {
-        // top: -67%;
-        // height: 230vh;
-        background-color: $dark;
-        .text {
-            padding: 0vh 40vw 20px 10vw;
-            color: beige;
-        }
+  }
+  @include media-breakpoint-up(sm) {
+    padding: 15% 3% 3%;
+    .bittrex {
+      grid-column: 1;
+      grid-row: 1;
     }
-    @include media-breakpoint-up(lg) {
-        // top: -57vh;
-        // height: 130vh;
-        background-color: $dark;
-        .text {
-            padding: 0vh 40vw 20px 10vw;
-            color: beige;
-        }
+    .gielda {
+      grid-column: 1;
+      grid-row: 2;
     }
-    @include media-breakpoint-up(xl) {
-        // top: -56vh;
-        // height: 230vh;
-        background-color: $dark;
-        .text {
-            padding: 0vh 40vw 20px 10vw;
-            color: beige;
-        }
+    .deliver {
+      grid-column: 1;
+      grid-row: 3;
     }
-    @include media-breakpoint-up(xl) {}
-    @include media-breakpoint-down(xs) {}
-    @include media-breakpoint-down(sm) {}
-    @include media-breakpoint-down(md) {}
-    @include media-breakpoint-down(lg) {}
+  }
+  .title {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 80px;
+    letter-spacing: 6px;
+    position: relative;
+    display: inline-block;
+  }
+  @media (max-width: 767px) {
     .title {
-        grid-column: 1;
-        grid-row: 1;
-        font-size: 50px;
-        font-weight: 700;
-        font-family: "Raleway", sans-serif;
-        text-transform: uppercase;
-        margin: 0 0 80px;
-        letter-spacing: 6px;
-        position: relative;
-        display: inline-block;
+      font-size: 35px;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
     }
-    @media (max-width: 767px) {
-        .title {
-            font-size: 35px;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-        }
-    }
-    .title:before {
-        position: absolute;
-        content: "";
-        height: 6px;
-        width: 15%;
-        bottom: -8px;
-        background: #ff2100;
-        background: linear-gradient(135deg, red 0%, #ff0177 100%);
-        background: -moz-linear-gradient(-45deg, red 0%, #ff0177 100%);
-        background: -moz-linear-gradient(-45deg, red 0%, #ff0177 100%);
-        background: -webkit-linear-gradient(-45deg, red 0%, #ff0177 100%);
-        background: -webkit-linear-gradient(315deg, red 0%, #ff0177 100%);
-        background: -o-linear-gradient(315deg, red 0%, #ff0177 100%);
-    }
+  }
+  .title:before {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 15%;
+    bottom: -8px;
+    background: #ff2100;
+    background: linear-gradient(135deg, rgb(160, 71, 71) 0%, $gred 100%);
+    background: -moz-linear-gradient(-45deg, red 0%, $gred 100%);
+    background: -moz-linear-gradient(-45deg, red 0%, $gred 100%);
+    background: -webkit-linear-gradient(-45deg, red 0%, $gred 100%);
+    background: -webkit-linear-gradient(315deg, red 0%, $gred 100%);
+    background: -o-linear-gradient(315deg, red 0%, $gred 100%);
+  }
 }
 
+//   @include media-breakpoint-up(xs) {
+//     // top: -109vh; //poprawić
+//     // height: 230vh;
+//     // padding: 80vh 0vw 20px 0vw;
+//     background-color: $dark;
+//     .text {
+//       padding: 15vh 20vw 20px 10vw;
+//       color: beige;
+//     }
+//   }
+//   @include media-breakpoint-down(sm) {
+//     // top: -109vh; //poprawić
+//     // height: 230vh;
+//     // padding: 80vh 0vw 20px 0vw;
+//     background-color: $dark;
+//     .text {
+//       padding: 15vh 0 20px 0;
+//       color: beige;
+//     }
+//   }
+//   @include media-breakpoint-up(sm) {
+//     // top: -69vh;
+//     // height: 230vh;
+//     background-color: $dark;
+//     .text {
+//       padding: 20vh 40vw 20px 10vw;
+//       color: beige;
+//     }
+//   }
+//   @include media-breakpoint-up(md) {
+//     // top: -67%;
+//     // height: 230vh;
+//     background-color: $dark;
+//     .text {
+//       padding: 0vh 40vw 20px 10vw;
+//       color: beige;
+//     }
+//   }
+//   @include media-breakpoint-up(lg) {
+//     // top: -57vh;
+//     // height: 130vh;
+//     background-color: $dark;
+//     .text {
+//       padding: 0vh 40vw 20px 10vw;
+//       color: beige;
+//     }
+//   }
+//   @include media-breakpoint-up(xl) {
+//     // top: -56vh;
+//     // height: 230vh;
+//     background-color: $dark;
+//     .text {
+//       padding: 0vh 40vw 20px 10vw;
+//       color: beige;
+//     }
+//   }
+//   @include media-breakpoint-up(xl) {
+//   }
+//   @include media-breakpoint-down(xs) {
+//   }
+//   @include media-breakpoint-down(sm) {
+//   }
+//   @include media-breakpoint-down(md) {
+//   }
+//   @include media-breakpoint-down(lg) {
+//   }
 // #lp {
 //     position: relative;
 //     height: 80vh;
