@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Img from "./../img/favorit.png";
+import Img from "./../img/favorit.png";
 // import Img2 from "./../img/allalerts.png";
 // import Img3 from "./../img/addalert.png";
 import "./Project.scss";
@@ -11,7 +11,10 @@ class Prokect extends Component {
         <h2 className="title text-center">Projekty</h2>
 
         <div className="container">
-          <div className="bittrex" />
+          <div className="bittrex">
+            <Card2 />
+            <Card2 img={Img} title="Bittrex volume alert" post="Alerty dla treiderów" git="https://github.com/kluk12/Bittrex-alert" link=""/>
+          </div>
           <div className="gielda">g</div>
           <div className="deliver">d</div>
         </div>
